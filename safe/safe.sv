@@ -24,7 +24,7 @@ module safe(	input logic MAX10_CLK1_50,
 		
 	end
 	
-	assign {HEX5, HEX4, HEX3, HEX2, HEX1, HEX0} = (fsm_out) ? LOCKED : OPEN;
+	assign {HEX5, HEX4, HEX3, HEX2, HEX1, HEX0} = (fsm_out[1]) ? LOCKED : OPEN;
 	
 	//
 	

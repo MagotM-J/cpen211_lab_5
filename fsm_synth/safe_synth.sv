@@ -13,7 +13,7 @@ module safe_synth(	input logic MAX10_CLK1_50,
 	localparam logic[47:0] LOCKED = 48'hC7_C0_C6_89_86_C0;
 	//
 	logic[9:0] s_node, password, attempt;
-	logic savePW, saveAT, match;
+	logic savePW, saveAT, match, locked;
 	logic[1:0] fsm_out;
 	
 	always_comb begin
@@ -24,7 +24,7 @@ module safe_synth(	input logic MAX10_CLK1_50,
 		
 	end
 	
-	assign {HEX5, HEX4, HEX3, HEX2, HEX1, HEX0} = (fsm_out) ? LOCKED : OPEN;
+	assign {HEX5, HEX4, HEX3, HEX2, HEX1, HEX0} = (fsm_out[1]) ? LOCKED : OPEN;
 	
 	//
 	
