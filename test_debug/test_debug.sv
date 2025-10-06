@@ -9,6 +9,6 @@ module test_debug(	input logic MAX10_CLK1_50,
 							output logic [7:0] HEX1,
 							output logic [7:0] HEX0 );
 	//
-	fsm_gates f(.MATCH(SW[9]), .RESETN(KEY[0]), .clk(MAX10_CLK1_50), .ENTER(KEY[1]), .out(HEX0[7]));
+	fsm_gates f(.MATCH(SW[9]), .RESETN(KEY[0]), .clk(MAX10_CLK1_50), .ENTER(KEY[1]), .ps(HEX0[7]), .save(HEX1[7]));
 	
 endmodule

@@ -7,6 +7,7 @@ module safe_lock(	input logic MAX10_CLK1_50,
 	//
 	localparam logic [47:0] OPEN = 48’hFC_C0_8C_86_AB_F7;
 	localparam logic [47:0] LOCKED = 48’hC7_C0_C6_89_86_C0;
+	
 
 	
 
